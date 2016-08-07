@@ -4,9 +4,15 @@ import (
     "fmt"
 )
 
+type Vertex struct {
+    X int
+    Y int
+}
+
 func main () {
     i, j := 42, 2701
     pointerExample(i, j)
+    fmt.Println(Vertex{3,4})
 }
 
 func pointerExample (i, j int) {
