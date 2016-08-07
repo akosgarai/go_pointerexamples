@@ -12,10 +12,16 @@ type Vertex struct {
 func main () {
     i, j := 42, 2701
     pointerExample(i, j)
-    v := Vertex{3, 4}
+    vertexExample(i, j)
+}
+
+func vertexExample (i, j int) {
+    v := Vertex{i, j}
     fmt.Println(v)
-    v.X = 5
-    fmt.Println(v)
+    p := &v
+    fmt.Println(*p)
+    p.X = 0
+    fmt.Println(*p)
 }
 
 func pointerExample (i, j int) {
